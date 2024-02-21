@@ -53,13 +53,18 @@ export const RoomHome = () => {
             });
 
             setObjects(newObjects);
-
-            userMediaStream = await navigator?.mediaDevices?.getUserMedia({
+        /*userMediaStream = await navigator?.mediaDevices?.getUserMedia({
                 video: {
                     width: { min: 640, ideal: 1280 },
                     height: { min: 400, ideal: 1080 },
                     aspectRatio: { ideal: 1.7777 },
                 },
+                audio: true
+            });*/
+          
+
+            userMediaStream = await navigator?.mediaDevices?.getUserMedia({
+
                 audio: true
             });
 
@@ -86,7 +91,7 @@ export const RoomHome = () => {
 
 
     const enterRoom = () => {
-        if(!userMediaStream){
+        if (!userMediaStream) {
             return setShowModal(true);
         }
 
@@ -107,9 +112,9 @@ export const RoomHome = () => {
                     localStorage.setItem('me', JSON.stringify(me));
                 }
 
-                const usersWithoutMe = users.filter((u : any) => u.user !== userId);
-                for(const user of usersWithoutMe){
-                    wsServices.addPeerConnection(user.clientId, userMediaStream, (_stream : any) => {
+                const usersWithoutMe = users.filter((u: any) => u.user !== userId);
+                for (const user of usersWithoutMe) {
+                    wsServices.addPeerConnection(user.clientId, userMediaStream, (_stream: any) => {
                         if (document.getElementById(user.clientId)) {
                             const videoRef: any = document.getElementById(user.clientId);
                             videoRef.srcObject = _stream;
@@ -131,7 +136,7 @@ export const RoomHome = () => {
         wsServices.onAddUser((user: any) => {
             console.log('onAddUser', user);
 
-            wsServices.addPeerConnection(user, userMediaStream, (_stream : any) => {
+            wsServices.addPeerConnection(user, userMediaStream, (_stream: any) => {
                 if (document.getElementById(user)) {
                     const videoRef: any = document.getElementById(user);
                     videoRef.srcObject = _stream;
@@ -141,7 +146,7 @@ export const RoomHome = () => {
             wsServices.callUser(user);
         });
 
-        wsServices.onAnswerMade((socket:any) => wsServices.callUser(socket));
+        wsServices.onAnswerMade((socket: any) => wsServices.callUser(socket));
     }
 
     const toggleMute = () => {
@@ -215,7 +220,7 @@ export const RoomHome = () => {
     }
 
     const getUsersWithoutMe = () => {
-        return connectedUsers.filter((u : any) => u.user !== userId);
+        return connectedUsers.filter((u: any) => u.user !== userId);
     }
 
     return (
@@ -236,7 +241,7 @@ export const RoomHome = () => {
                                     <audio id='localVideoRef' playsInline autoPlay muted />
                                     {getUsersWithoutMe()?.map((user: any) =>
                                         <audio key={user.clientId} id={user.clientId}
-                                            playsInline autoPlay muted={user?.muted}/>
+                                            playsInline autoPlay muted={user?.muted} />
                                     )}
                                 </div>
                                 <RoomObjects
