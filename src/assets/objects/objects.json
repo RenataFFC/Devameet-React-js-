@@ -133,10 +133,10 @@
         "defaultYPosition": 3,
         "defaultZIndex": 3,
         "objects": [
-            "animals_01_left", 
-            "animals_01_right", 
-            "animals_02_left",
-            "animals_02_right"         
+            "animals_01", 
+            "animals_02", 
+            "animals_03"
+                  
         ]
     }
   }

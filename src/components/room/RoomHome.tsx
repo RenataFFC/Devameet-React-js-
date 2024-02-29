@@ -53,20 +53,20 @@ export const RoomHome = () => {
             });
 
             setObjects(newObjects);
-            /*userMediaStream = await navigator?.mediaDevices?.getUserMedia({
+            userMediaStream = await navigator?.mediaDevices?.getUserMedia({
                     video: {
                         width: { min: 640, ideal: 1280 },
                         height: { min: 400, ideal: 1080 },
                         aspectRatio: { ideal: 1.7777 },
                     },
                     audio: true
-                });*/
+                });
 
 
-            userMediaStream = await navigator?.mediaDevices?.getUserMedia({
+            /*userMediaStream = await navigator?.mediaDevices?.getUserMedia({
 
                 audio: true
-            });
+            });*/
 
             if (document.getElementById('localVideoRef')) {
                 const videoRef: any = document.getElementById('localVideoRef');
@@ -233,20 +233,21 @@ export const RoomHome = () => {
                             ?
                             <>
                                 <div className="resume">
+                                <video className="video-player" id='localVideoRef' playsInline autoPlay muted />
                                     <div onClick={copyLink}>
                                         <span><strong>Reunião</strong> {link}</span>
                                         <img src={copyIcon} />
                                     </div>
                                     <p style={{ color }}>{name}</p>
-                                    <video className="video-player" id='localVideoRef' playsInline autoPlay muted />
-                                    <audio id='localVideoRef' playsInline autoPlay muted />
+                                  
+                                  {/* <audio id='localVideoRef' playsInline autoPlay muted />*/}
                                     {getUsersWithoutMe()?.map((user: any) =>
                                         <>
-                                            <video className="video-player" key={`video-${user.clientId}`}
+                                            <video className="video" key={`video-${user.clientId}`}
                                                 id={user.clientId} playsInline autoPlay muted={user?.muted} />
 
-                                            <audio key={user.clientId} id={user.clientId}
-                                                playsInline autoPlay muted={user?.muted} />
+                                            {/*<audio key={user.clientId} id={user.clientId}
+                                                playsInline autoPlay muted={user?.muted} />*/}
                                         </>
                                     )}
                                 </div>

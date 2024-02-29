@@ -54,8 +54,10 @@
         }
 
         .video-player{
-            width: 140px;
-            height: 80px;
+            width: 355px;
+            height: 200px;
+            border-radius: 15px;
+            border: 5px solid $primaryColor;
 
         }
     }
@@ -112,5 +114,15 @@
             margin-left: 24px;
             padding-bottom: 24px;
         }
+
+        .video-player{
+            width: 340px;
+            height: 250px;
+            border-radius: 5px;
+            border: 5px solid $primaryColor;
+            background-color: $primaryColor;
+        }
+
+       
     }
 }
