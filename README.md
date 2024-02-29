@@ -24,7 +24,7 @@ https://www.figma.com/file/mIXcu8SJWqi0ylVHtZn89a/Devameet-(Projeto-2023)
   #
 ### Configuração do ambiente de desenvolvimento
 
-1. clonar o repositório `git clone git@github.com:Elianehenri/devameet-react-js.git` 
+1. clonar o repositório `git clone ` 
 1. fazer uma copia do arquivo `.env.example` e renomear o novo arquivo de `.env.local`
 1. configurar as variáveis de ambiente no arquivo `.env.local`
 1. instale as dependencias do projeto `npm i`
