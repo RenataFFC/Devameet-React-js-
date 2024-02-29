@@ -44,7 +44,7 @@ https://www.figma.com/file/mIXcu8SJWqi0ylVHtZn89a/Devameet-(Projeto-2023)
 ## Projeto Finalizado
 
 <div align="center" width="100%">
-<img class="logo-nav" height="65%" width="65%" src="https://github.com/RenataFFC/devameet-react-js-main/assets/97262523/3adca402-e1a1-4315-9ee7-a66cf81e17e1" alt="img tela">
-<img class="logo-nav" height="65%" width="65%" src="https://github.com/RenataFFC/devameet-react-js-main/assets/97262523/3adca402-e1a1-4315-9ee7-a66cf81e17e1" alt="img tela">
+<img class="logo-nav" height="50%" width="65%" src="https://github.com/RenataFFC/devameet-react-js-main/assets/97262523/3adca402-e1a1-4315-9ee7-a66cf81e17e1" alt="img tela Room">
+<img class="logo-nav" height="20%" width="20%" src="https://github.com/RenataFFC/devameet-react-js-main/assets/97262523/acb8104d-4c22-44d8-8620-00a583b9ed58" alt="img tela Login">
 
  </div>
