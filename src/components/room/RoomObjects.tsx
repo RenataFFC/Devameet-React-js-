@@ -8,10 +8,10 @@ import micOffIcon from '../../assets/images/mic_off.svg';
 
 type RoomObjectsProps = {
     objects: Array<any>,
-    connectedUsers: Array<any>,
-    me: any,
+    connectedUsers?: Array<any>,
+    me?: any,
     enterRoom():void,
-    toggleMute():void
+    toggleMute?():void
 }
 
 export const RoomObjects : React.FC<RoomObjectsProps> = ({objects, enterRoom, connectedUsers, me, toggleMute}) =>{
@@ -20,7 +20,7 @@ export const RoomObjects : React.FC<RoomObjectsProps> = ({objects, enterRoom, co
     const mobile = window.innerWidth <= 992;
 
     const getImageFromObject = (object: any, isAvatar: boolean) => {
-        if (object && object._id) {
+        if (object?._id) {
             const path = `../../assets/objects/${isAvatar ? 'avatar' : object?.type}/${isAvatar ? object.avatar : object.name}${object.orientation? "_"+ object.orientation : ''}.png`;
             const imageUrl = new URL(path, import.meta.url);
 

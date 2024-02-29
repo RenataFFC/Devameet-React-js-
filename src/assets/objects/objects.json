@@ -124,5 +124,19 @@
             "nature_08",
             "nature_09"
         ]
+    },
+    "animals": {
+        "path": "animals",
+        "selectMultiple": true,
+        "canRotate": false,
+        "defaultXPosition": 2,
+        "defaultYPosition": 3,
+        "defaultZIndex": 3,
+        "objects": [
+            "animals_01_left", 
+            "animals_01_right", 
+            "animals_02_left",
+            "animals_02_right"         
+        ]
     }
-}
+  }

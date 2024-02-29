@@ -9,6 +9,7 @@ import chairIcon from '../../assets/images/chair.svg';
 import couchIcon from '../../assets/images/couch.svg';
 import decorIcon from '../../assets/images/decor.svg';
 import natureIcon from '../../assets/images/nature.svg';
+import animalsIcon from "../../assets/images/animal.png";
 import objectsJson from '../../assets/objects/objects.json';
 import { MeetObjectsRoom } from "./MeetObjectsRoom";
 import { useNavigate, useParams } from "react-router-dom";
@@ -202,6 +203,7 @@ export const MeetEdit = () => {
                     <MeetObjectPicker image={couchIcon} label="Sofás" asset={objectsJson.couch} selected={selected?.name} setObject={setObject} />
                     <MeetObjectPicker image={decorIcon} label="Decorações" asset={objectsJson.decor} selected={selected?.name} setObject={setObject} />
                     <MeetObjectPicker image={natureIcon} label="Plantas" asset={objectsJson.nature} selected={selected?.name} setObject={setObject} />
+                    <MeetObjectPicker image={animalsIcon} label="Animal" asset={objectsJson.animals} selected={selected?.name} setObject={setObject} />
                 </div>
                 <div className="form">
                     <span onClick={goBack}>Voltar</span>
