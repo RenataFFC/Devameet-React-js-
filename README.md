@@ -45,5 +45,6 @@ https://www.figma.com/file/mIXcu8SJWqi0ylVHtZn89a/Devameet-(Projeto-2023)
 
 <div align="center" width="100%">
 <img class="logo-nav" height="65%" width="65%" src="https://github.com/RenataFFC/devameet-react-js-main/assets/97262523/3adca402-e1a1-4315-9ee7-a66cf81e17e1" alt="img tela">
+<img class="logo-nav" height="65%" width="65%" src="https://github.com/RenataFFC/devameet-react-js-main/assets/97262523/3adca402-e1a1-4315-9ee7-a66cf81e17e1" alt="img tela">
 
  </div>
